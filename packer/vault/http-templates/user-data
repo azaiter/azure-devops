@@ -16,15 +16,13 @@ autoinstall:
         uri: http://us.archive.ubuntu.com/ubuntu
       - arches: [default]
         uri: http://ports.ubuntu.com/ubuntu-ports
-  early-commands:
-    - sudo systemctl stop ssh
   locale: en_US
   keyboard:
     layout: us
   identity:
-    hostname: jammy-daily
+    hostname: vault
     username: admin
-    plain_text_passwd: ${admin_password}
+    password: ${admin_password_hashed}
   ssh:
     install-server: true
     allow-pw: true
