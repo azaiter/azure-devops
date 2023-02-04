@@ -1,0 +1,3 @@
+# this is just an example (powershell)
+$env:PACKER_LOG=1
+packer build -var="admin_password=S0meSecurePassw0rd" -var="admin_password_hashed=`$6`$rYsjBiVUTM3CxL3V`$iUSTZ0sZjHWOxPlNpZMpfpxONmJha464u0r3pVfkITjCAzjSGGSF4Vh6hvrvDzpB4NJgHQlA9lwM/8wmqZ.3H/" -force "./"
