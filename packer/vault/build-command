@@ -1,0 +1,2 @@
+# this is just an example
+packer build -var="admin_password=S0meSecurePassw0rd" -force "./"
