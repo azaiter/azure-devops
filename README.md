@@ -1,4 +1,4 @@
-A small refresher infrastructure planning excercise ...
+A small refresher infrastructure planning exercise ...
 
 Technologies that will explored in this project:
 - [Hashicorp's Vault](https://www.vaultproject.io/)
@@ -21,7 +21,7 @@ In this repo, the plan is to accomplish the following as a personal learning tra
         - Setup public key authentication, and rotate admin user credentials based on a value provided from vault
         - Disable ssh password authentication
         - Install, enable, and start the vault service
-    - The cloudflared tunnel will have the following rules to only allow needed resources to interact with vault publically on the internet:
+    - The Cloudflare tunnel will have the following rules to only allow needed resources to interact with vault publicly on the internet:
         - Only my **Github SSO** user will be able to access the HTTP API and gui of vault
             - This ensures that I'm a) authorized b) authenticated through SSO
         - Allow the IPs of **Azure DevOps** to interact with vault's HTTP API
