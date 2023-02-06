@@ -1,9 +1,10 @@
-A small refresher infrastructure excercise ...
+A small refresher infrastructure planning excercise ...
 
 Technologies that will explored in this project:
 - [Hashicorp's Vault](https://www.vaultproject.io/)
 - [Hashicorp's Packer](https://www.packer.io/)
 - [Hashicorp's Terraform](https://www.terraform.io/)
+- [Ansible](https://www.ansible.com/)
 - [Cloudflare Zero-Trust tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/)
 - GitHub SSO
 - VMWare Virtual Machines
@@ -16,6 +17,10 @@ Technologies that will explored in this project:
 In this repo, the plan is to accomplish the following as a personal learning training starting from scratch:
 - Templating an Ubuntu-based Vault VM in **Packer**
 - Setting up a local hashicorp **Vault** VM locally using **VMWare** to store our secrets for this project, and expose the HTTP endpoint behind a **Cloudflare Zero Trust** tunnel
+    - @TODO: Extra points for writing an **Ansible** playbook to:
+        - Setup public key authentication, and rotate admin user credentials based on a value provided from vault
+        - Disable ssh password authentication
+        - Install, enable, and start the vault service
     - The cloudflared tunnel will have the following rules to only allow needed resources to interact with vault publically on the internet:
         - Only my **Github SSO** user will be able to access the HTTP API and gui of vault
             - This ensures that I'm a) authorized b) authenticated through SSO
